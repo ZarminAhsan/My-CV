@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Person">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Android Developer & UI/UX Designer</title>
+    <title itemprop="name">Portfolio | Android Developer & UI/UX Designer</title>
+    <meta itemprop="jobTitle" content="Android Developer & UI/UX Designer">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
 
 <header>
     <div class="logo">Portfolio</div>
@@ -26,181 +26,162 @@
     <button id="theme-toggle">🌙</button>
 </header>
 
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight" itemprop="name">Zarmin Ahsan</span></h1>
+        <p itemprop="description">Android Developer & UI/UX Designer | Passionate about crafting seamless user experiences.</p>
+        <a href="Zarmin's CV.pdf" download class="btn" itemprop="url">Download Resume</a>
+    </div>
+    <div class="hero-image">
+        <img src="WhatsApp Image 2025-03-16 at 11.37.48_a1e3b08c.jpg" alt="Profile Picture" itemprop="image">
+    </div>
+</section>
 
-  
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Zarmin Ahsan</span></h1>
-            <p>Android Developer & UI/UX Designer | Passionate about crafting seamless user experiences.</p>
-            <a href="Zarmin's CV.pdf" download class="btn">Download Resume</a>
+<section id="skills">
+    <div class="skills-heading">
+        <h2>Technical Skills</h2>
+    </div>
+    <div class="skills-grid">
+        <!-- skills do not have schema markup for Person; can be handled with additional schemas like EducationalOccupationalCredential or CreativeWork if needed -->
+        <div class="skill-card">
+            <img src="icons8-android-studio-96.png" alt="Android">
+            <p>Android (Kotlin, Java)</p>
         </div>
-    
-        <div class="hero-image">
-            <img src="WhatsApp Image 2025-03-16 at 11.37.48_a1e3b08c.jpg" alt="Profile Picture">
+        <div class="skill-card">
+            <img src="icons8-jetpack-100.png" alt="Jetpack Compose">
+            <p>Jetpack Compose</p>
         </div>
-    </section>
-    
+        <div class="skill-card">
+            <img src="icons8-figma-96.png" alt="Figma">
+            <p>Figma UI/UX</p>
+        </div>
+        <div class="skill-card">
+            <img src="icons8-material-ui-96.png" alt="Material Design">
+            <p>Material Design</p>
+        </div>
+        <div class="skill-card">
+            <img src="icons8-rest-api-96.png" alt="REST API">
+            <p>REST API & Firebase</p>
+        </div>
+        <div class="skill-card">
+            <img src="icons8-git-96.png" alt="Git">
+            <p>Git & Version Control</p>
+        </div>
+    </div>
+</section>
 
-    <section id="skills">
-        <div class="skills-heading">
-            <h2>Technical Skills</h2>
-        </div>
-    
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img src="icons8-android-studio-96.png" alt="Android">
-                <p>Android (Kotlin, Java)</p>
-            </div>
-            <div class="skill-card">
-                <img src="icons8-jetpack-100.png" alt="Jetpack Compose">
-                <p>Jetpack Compose</p>
-            </div>
-            <div class="skill-card">
-                <img src="icons8-figma-96.png" alt="Figma">
-                <p>Figma UI/UX</p>
-            </div>
-            <div class="skill-card">
-                <img src="icons8-material-ui-96.png" alt="Material Design">
-                <p>Material Design</p>
-            </div>
-            <div class="skill-card">
-                <img src="icons8-rest-api-96.png" alt="REST API">
-                <p>REST API & Firebase</p>
-            </div>
-            <div class="skill-card">
-                <img src="icons8-git-96.png" alt="Git">
-                <p>Git & Version Control</p>
+<section id="experience">
+    <div class="experience-heading">
+        <h2>Experience</h2>
+    </div>
+    <div class="experience-container">
+        <div class="experience-card" itemscope itemtype="https://schema.org/Organization">
+            <div class="exp-content">
+                <h3 itemprop="jobTitle">Android Developer</h3>
+                <p class="company" itemprop="name">Enfotrix</p>
+                <meta itemprop="startDate" content="2024-01">
+                <p class="role-description">
+                    - Developed modern Android applications using Jetpack Compose and MVVM architecture.  
+                    - Integrated REST APIs and Firebase for real-time updates and authentication.  
+                    - Enhanced application performance through efficient memory management and asynchronous processing.  
+                    - Collaborated with UI/UX designers to implement responsive, user-friendly interfaces.
+                </p>
             </div>
         </div>
-    </section>
-    
 
-    <section id="experience">
-        <div class="experience-heading">
-            <h2>Experience</h2>
-        </div>
-    
-        <div class="experience-container">
-         
-            <div class="experience-card">
-                <div class="exp-content">
-                    <h3>Android Developer</h3>
-                    <p class="company">Enfotrix | 2024</p>
-                    <p class="role-description">
-                        - Developed modern Android applications using Jetpack Compose and MVVM architecture.  
-                        - Integrated REST APIs and Firebase for real-time updates and authentication.  
-                        - Enhanced application performance through efficient memory management and asynchronous processing.  
-                        - Collaborated with UI/UX designers to implement responsive, user-friendly interfaces.
-                    </p>
-                </div>
-            </div>
-    
-          
-            <div class="experience-card">
-                <div class="exp-content">
-                    <h3>UI/UX Designer</h3>
-                    <p class="company">Freelance | 2023 - Present</p>
-                    <p class="role-description">
-                        - Designed engaging mobile and web interfaces using Figma and Material Design principles.  
-                        - Conducted user research and usability testing to optimize user experience.  
-                        - Developed wireframes, prototypes, and high-fidelity UI components for mobile apps.  
-                        - Worked closely with developers to ensure pixel-perfect design implementation.
-                    </p>
-                </div>
+        <div class="experience-card" itemscope itemtype="https://schema.org/Organization">
+            <div class="exp-content">
+                <h3 itemprop="jobTitle">UI/UX Designer</h3>
+                <p class="company" itemprop="name">Freelance</p>
+                <meta itemprop="startDate" content="2023-01">
+                <p class="role-description">
+                    - Designed engaging mobile and web interfaces using Figma and Material Design principles.  
+                    - Conducted user research and usability testing to optimize user experience.  
+                    - Developed wireframes, prototypes, and high-fidelity UI components for mobile apps.  
+                    - Worked closely with developers to ensure pixel-perfect design implementation.
+                </p>
             </div>
         </div>
-    </section>
-    
-    
-    <section id="projects">
-        <div class="projects-heading">
-            <h2>Projects</h2>
-        </div>
-    
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-inner">
-                    <div class="project-front">
-                        <h3>AI Mood-Based Song App</h3>
-                    </div>
-                    <div class="project-back">
-                        <p>An AI-powered app that recommends songs based on facial expressions.</p>
-                    </div>
-                    
-                </div>
-            </div>
-    
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-inner">
-                    <div class="project-front">
-                        <h3>Expense Tracker</h3>
-                    </div>
-                    <div class="project-back">
-                        <p>A finance app with an intuitive UI and real-time data synchronization.</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+</section>
 
-            <div class="project-card">
-                <div class="project-inner">
-                    <div class="project-front">
-                        <h3>Cricket App</h3>
-                    </div>
-                    <div class="project-back">
-                        <p>Developed Responsive front-end of cricket app.</p>
-                    </div>
+<section id="projects">
+    <div class="projects-heading">
+        <h2>Projects</h2>
+    </div>
+    <div class="projects-container">
+        <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="project-inner">
+                <div class="project-front">
+                    <h3 itemprop="name">AI Mood-Based Song App</h3>
+                </div>
+                <div class="project-back">
+                    <p itemprop="description">An AI-powered app that recommends songs based on facial expressions.</p>
                 </div>
             </div>
         </div>
-    </section>
-    
-    
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-heading">
-            <h2>Let's Connect!</h2>
-            <p>Feel free to reach out for collaborations or inquiries.</p>
-        </div>
-    
-        <div class="contact-container">
-            <!-- Left Column: Contact Info -->
-            <div class="contact-info">
-                <div class="contact-item">
-                    <img src="icons8-gmail-48.png" alt="Email">
-                    <a href="mailto:zarminahsan467@gmail.com">zarminahsan467@gmail.com</a>
+        <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="project-inner">
+                <div class="project-front">
+                    <h3 itemprop="name">Expense Tracker</h3>
                 </div>
-                <div class="contact-item">
-                    <img src="icons8-pinterest-96.png" alt="Pinterest">
-                    <a href="https://pin.it/1Gz8X9Uau" target="_blank">Pinterest Profile</a>
-                </div>
-                <div class="contact-item">
-                    <img src="icons8-github-logo-94.png" alt="GitHub">
-                    <a href="https://github.com/ZarminAhsan" target="_blank">GitHub Repository</a>
+                <div class="project-back">
+                    <p itemprop="description">A finance app with an intuitive UI and real-time data synchronization.</p>
                 </div>
             </div>
-    
-            <!-- Right Column: Contact Form -->
-            <div class="contact-form">
-                <h3>Send a Message</h3>
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
         </div>
-    </section>
-    
-    
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 ZarminAhsan | All Rights Reserved</p>
-    </footer>
+        <div class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="project-inner">
+                <div class="project-front">
+                    <h3 itemprop="name">Cricket App</h3>
+                </div>
+                <div class="project-back">
+                    <p itemprop="description">Developed responsive front-end of a cricket app.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-heading">
+        <h2>Let's Connect!</h2>
+        <p>Feel free to reach out for collaborations or inquiries.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="icons8-gmail-48.png" alt="Email">
+                <a href="mailto:zarminahsan467@gmail.com" itemprop="email">zarminahsan467@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <img src="icons8-pinterest-96.png" alt="Pinterest">
+                <a href="https://pin.it/1Gz8X9Uau" target="_blank" itemprop="sameAs">Pinterest Profile</a>
+            </div>
+            <div class="contact-item">
+                <img src="icons8-github-logo-94.png" alt="GitHub">
+                <a href="https://github.com/ZarminAhsan" target="_blank" itemprop="sameAs">GitHub Repository</a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 <span itemprop="name">Zarmin Ahsan</span> | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
