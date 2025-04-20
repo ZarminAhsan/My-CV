@@ -1,0 +1,645 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #b3b9d6;
+    color: #333;
+    scroll-behavior: smooth;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+/* Navigation Bar */
+/* Header */
+header {
+    display: flex;
+    justify-content: center; /* Centers the nav */
+    align-items: center;
+    padding: 15px 30px;
+    background:#3251777a;/* Transparent for Glass Effect */
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    color: #fff;
+    position: fixed;
+    width: 94%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1008;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Logo (Moves Left) */
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 30px;
+}
+
+/* Navigation Centering */
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Ensures nav takes available space */
+}
+
+/* Navigation Menu */
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Links */
+header nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+}
+
+/* Underline Animation */
+header nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #f39c12;
+    transition: width 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Theme Toggle Button (Moves Right) */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    right: 30px;
+}
+
+/* Dark Mode Toggle Effect */
+#theme-toggle:hover {
+    transform: rotate(20deg);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    header .logo {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    header nav {
+        justify-content: center;
+        flex: unset;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #theme-toggle {
+        position: static;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+/* Sections */
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44vh;
+    padding: 10% 10%;
+    background: linear-gradient(135deg, #0a192f, #14273e);
+    color: white;
+    text-align: left;
+}
+
+/* Hero Content */
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+/* Hero Heading */
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* Highlighted Name */
+.hero-content .highlight {
+    background: linear-gradient(45deg, #00d9ff, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Description */
+.hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Resume Button */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 217, 255, 0.2);
+    border: 2px solid #00d9ff;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background: #00d9ff;
+    color: #0a192f;
+    box-shadow: 0px 4px 10px rgba(0, 217, 255, 0.5);
+}
+
+/* Hero Image */
+.hero-image {
+    
+    animation: fadeInRight 1.5s ease-in-out;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 10%;
+    top: -5%; /* Moves image slightly up */
+    z-index: 1; /* Ensures image is above the background but below text */
+}
+
+.hero-image img {
+    width: 458px;
+    max-width: 99%;
+    border-radius: 17%;
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+    margin-top:  252px;
+    margin-right: -103px;
+    animation: popUp 1.2s ease-out, glowEffect 2s infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+}
+
+
+/* Skills Section */
+/* Skills Section */
+#skills {
+    background: #d8e3f1;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* Section Heading */
+.skills-heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Skill Cards */
+.skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+
+
+/* Experience Section */
+#experience {
+    background: #c7cce6;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* Section Heading */
+.experience-heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.experience-heading h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 8px auto;
+    border-radius: 2px;
+}
+
+/* Experience Container (Side by Side) */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Experience Cards */
+.experience-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Experience Content */
+.experience-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experience-card .company {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.experience-card .role-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Projects Section */
+/* Projects Section */
+#projects {
+    background: radial-gradient(circle at top left, #f8f9fa, #e9ecef);
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* Section Heading */
+.projects-heading h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 50px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.projects-heading h2::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 8px auto;
+    border-radius: 2px;
+}
+
+/* Projects Container */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Flip Card Effect */
+.project-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Card Inner */
+.project-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Hover Effect */
+.project-card:hover .project-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card Front & Back */
+.project-front, .project-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Front Side */
+.project-front {
+    background: #264a6f;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+/* Back Side */
+.project-back {
+    background: rgb(210, 213, 230);
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    transform: rotateY(180deg);
+    border: 2px solid #264a6f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Contact Section */
+/* Contact Section */
+#contact {
+    background: #f8f9fa;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* Section Heading */
+.contact-heading h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-heading p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Contact Container */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+/* Contact Info (Left Column) */
+.contact-info {
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #ff5733;
+}
+
+/* Contact Form (Right Column) */
+.contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.contact-form h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background: #052343;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #e1eaf7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #14273e;
+    color: white;
+}
